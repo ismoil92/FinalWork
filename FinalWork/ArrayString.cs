@@ -18,4 +18,25 @@ public class ArrayString
         }
         return size;
     }
+
+    /// <summary>
+    /// Создание нового массива строк
+    /// </summary>
+    /// <param name="oldArray">старый массив строк</param>
+    /// <param name="newArray">новый массив строк</param>
+    /// <returns>возвращает новый массив строк</returns>
+    public static string[] CreateArray(string[] oldArray, string[] newArray)
+    {
+        int j = 0;
+        for (int i = 0; i < oldArray.Length; i++)
+        {
+            if (oldArray[i].Length <= 3)
+            {
+                newArray[j] = oldArray[i];
+                j++;
+            }
+        }
+
+        return newArray;
+    }
 }
